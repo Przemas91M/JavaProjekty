@@ -43,5 +43,40 @@ public class Main {
         System.out.println(suma);
         suma = EqualSumChecker.hasEqualSum(1, -1, 0);
         System.out.println(suma);
+
+        System.out.println(AreaCalculator.area(5.0d));
+        System.out.println(AreaCalculator.area(5,4));
+        System.out.println(AreaCalculator.area(-1));
+
+        MinutesToYearsDaysCalculator.printYearsAndDays(525600);
+        MinutesToYearsDaysCalculator.printYearsAndDays(1051200);
+        MinutesToYearsDaysCalculator.printYearsAndDays(561600);
+
+        IntEqualityPrinter.printEqual(1,1,1);
+        IntEqualityPrinter.printEqual(1,1,2);
+        IntEqualityPrinter.printEqual(1,2,1);
+        IntEqualityPrinter.printEqual(1,2,3);
+        IntEqualityPrinter.printEqual(-1,-1,-1);
+
+        suma = PlayingCat.isCatPlaying(true, 10);
+        System.out.println(suma);
+        suma = PlayingCat.isCatPlaying(false, 36);
+        System.out.println(suma);
+        suma = PlayingCat.isCatPlaying(false, 35);
+        System.out.println(suma);
+
+        DayOfTheWeekChallenge.printDayOfTheWeek(5);
+        DayOfTheWeekChallenge.printDayOfTheWeek(7);
+
+        NumberInWord.printNumberInWord(6);
+        NumberInWord.printNumberInWord(-4);
+        NumberInWord.printNumberInWord(12);
+
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(1, 2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2, 2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2, 2018));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(-1, 2020));
+        System.out.println(NumberOfDaysInMonth.getDaysInMonth(1, -2020));
+
     }
 }
