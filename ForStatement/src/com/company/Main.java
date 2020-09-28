@@ -20,6 +20,19 @@ public class Main {
                 }
             }
         }
+        count = 0;
+        int sum = 0;
+        for(int i = 1; i <=1000; i++){
+            if((i % 3 == 0) && (i % 5 == 0)){
+                System.out.println("Number " + i + " met the conditions");
+                sum += i;
+                count++;
+            }
+            if(count == 5){
+                System.out.println("Sum of founded number is: "+ sum);
+                break;
+            }
+        }
     }
     public static double calculateInterest(double amount, double interestRate){
         return (amount * (interestRate / 100));
