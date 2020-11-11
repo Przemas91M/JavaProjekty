@@ -1,5 +1,4 @@
 package com.company;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -8,5 +7,6 @@ public class Main {
 	dog.eat();
 	dog.walk();
 	dog.run();
+
     }
 }
