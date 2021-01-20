@@ -77,6 +77,13 @@ public class Player {
         if(!playlist.isEmpty()) {
             iterator.remove();
             System.out.println("Song removed!");
+            if (iterator.hasPrevious()) {
+                currentSong = iterator.previous();
+                System.out.println("Now playing: " + currentSong);
+            } else if (iterator.hasNext()) {
+                currentSong = iterator.next();
+                System.out.println("Now playing: " + currentSong);
+            }
         } else {
             System.out.println("Playlist is empty!");
         }
