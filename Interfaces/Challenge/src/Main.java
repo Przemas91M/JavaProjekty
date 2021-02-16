@@ -12,8 +12,13 @@ public class Main {
         System.out.println(tim);
         tim.setWeapon("Stormbringer");
         saveObject(tim);
-        loadObject(tim);
+        //loadObject(tim);
         System.out.println(tim);
+
+        ISaveable werewolf = new Monster("Werewolf", 20, 40);
+        System.out.println("Monster strength = " +((Monster) werewolf).getStrength()); //trzeba wykorzystać rzutowanie, by odczytać dane z interfejsu
+        saveObject(werewolf);
+        System.out.println(werewolf);
     }
 
     public static ArrayList<String> readValues(){
