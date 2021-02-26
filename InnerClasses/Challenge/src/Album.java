@@ -4,9 +4,9 @@ public class Album {
 
     private String name;
     private String artist;
-    private ArrayList<Song> songs;
+    private SongList songs;
 
-    public static class SongList{
+    private static class SongList{
         private ArrayList<Song> songs;
 
         public SongList() {
@@ -40,12 +40,16 @@ public class Album {
             }
             return null;
         }
+
+        private ArrayList<Song> getSongList() {
+            return this.songs;
+        }
     }
 
     public Album(String name, String artist) {
         this.name = name;
         this.artist = artist;
-        this.songs = new ArrayList<>();
+        this.songs = new SongList();
     }
 
     public String getName() {
@@ -53,7 +57,7 @@ public class Album {
     }
 
     public ArrayList<Song> getSongs() {
-        return songs;
+        return this.songs.getSongList();
     }
 
     public void addSong(Song song) {
